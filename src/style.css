@@ -1,0 +1,25 @@
+body{
+    font-size: 16px;
+}
+
+h1{
+    text-shadow: 10px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+mark{
+    background-color: blueviolet;
+}
+
+p{
+    font-family: Arial;
+}
+
+ul{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+}
