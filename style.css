@@ -34,23 +34,56 @@ body {
     /* grandintes */
     --fundo: linear-gradient(45deg, #591ED9, #8C2354)
 }
-
-/* class */
-.backgroud {
-    background: var(--rosa-claro);
-}
-
+/* class reutilisaveis */
 .conteiner {
     max-width: 1440px;
-    padding-left: 30px;
+    padding: 0 5%;
     margin: 0 auto;
 }
 
+.janela-main {
+    background: var(--rosa-claro);
+
+    padding-bottom:20px;
+    margin:30px 0;
+    padding: 15px 5%;
+    border-radius: 16px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 5px 5px 15px var(--roxo-escuro)
+}
+.janela-sub {
+    background: var(--roxo-escuro);
+    border-color: white;
+
+    padding-bottom:20px;
+    margin:30px 0;
+    padding: 15px 5%;
+    border-radius: 16px;
+    border: solid rgb(121, 75, 228);
+    
+    display: inline-block;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 5px 5px 15px var(--rosa-claro)
+
+}
+.janela-sub:hover {
+
+}
+
+/* class */
+.fundorosa {
+    background: var(--rosa-claro);
+}
 .logo a {
     font: bold normal 30px "Poppins";
     color: var(--roxo-escuro);
     padding: 0 5%;
-
 }
 nav {
     display: flex;
@@ -63,25 +96,20 @@ nav {
     display: flex;
     align-items: center;
 }
-
 .ul li {
     padding: 0 20px;
     font-size: 1.1em;
 }
-
-.ul li a:hover {
-    background: #150140;
-    padding: 4px 15px;
-    border-radius: 10px;
-    color: var(--rosa-claro);
-    transition: 0.3s;
-}
-
 .ul li a {
     color: var(--roxo-escuro);
 }
-
-
+.ul li a:hover {
+    background: #150140;
+    padding: 5px 20px;
+    border-radius: 10px;
+    color: var(--rosa-claro);
+    transition: 0.5s;
+}
 .btn {
     cursor: pointer;
     background: var(--roxo-claro);
@@ -91,8 +119,34 @@ nav {
     transition: 0.3s;
     border: none;
 }
-
 .btn:hover {
     color: var(--rosa-claro);
     background: var(--roxo-escuro);
+}
+.fundocolor {
+    background: var(--rosa-claro);
+}
+
+/* mains */
+.text-main {
+    width: 50%;
+    color:  var(--roxo-escuro);
+}
+.text-main h1 {
+    font-size: 4em;
+}
+.text-main h2 {
+    font-size: 2rem;
+    color: var(--roxo-claro);
+}
+.main-img {
+    width: 50%;
+    max-width: 400px; /* limita o tamanho da imagem */
+    text-align: center; /* para o texto alt */
+}
+.main-img img {
+    width: 100%; /* ajusta para o conteiner no caso .main-img*/
+    border-radius: 50%;
+    box-shadow: 0 0 15px var(--roxo-escuro); /*sobra*/
+    object-fit: cover; /* Garante que a imagem expanda sem distorçao*/
 }
