@@ -2,11 +2,13 @@
 
 * {
     text-align: justify;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+
     margin: 0px;
     padding: 0px;
     margin: 0px;
-    text-decoration: none;
-    font-family: "Poppins", sans-serif;
+
     box-sizing: border-box;
 }
 
@@ -34,119 +36,75 @@ body {
     /* grandintes */
     --fundo: linear-gradient(45deg, #591ED9, #8C2354)
 }
-/* class reutilisaveis */
-.conteiner {
-    max-width: 1440px;
-    padding: 0 5%;
-    margin: 0 auto;
-}
+/* Classes */
 
-.janela-main {
-    background: var(--rosa-claro);
-
-    padding-bottom:20px;
-    margin:30px 0;
-    padding: 15px 5%;
-    border-radius: 16px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    box-shadow: 5px 5px 15px var(--roxo-escuro)
-}
-.janela-sub {
-    background: var(--roxo-escuro);
-    border-color: white;
-
-    padding-bottom:20px;
-    margin:30px 0;
-    padding: 15px 5%;
-    border-radius: 16px;
-    border: solid rgb(121, 75, 228);
-    
-    display: inline-block;
-    justify-content: space-between;
-    align-items: center;
-
-    box-shadow: 5px 5px 15px var(--rosa-claro)
-
-}
-.janela-sub:hover {
-
-}
-
-/* class */
-.fundorosa {
-    background: var(--rosa-claro);
-}
-.logo a {
-    font: bold normal 30px "Poppins";
-    color: var(--roxo-escuro);
-    padding: 0 5%;
-}
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 5%;
-}
-.ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-}
-.ul li {
-    padding: 0 20px;
-    font-size: 1.1em;
-}
-.ul li a {
-    color: var(--roxo-escuro);
-}
-.ul li a:hover {
-    background: #150140;
-    padding: 5px 20px;
-    border-radius: 10px;
-    color: var(--rosa-claro);
-    transition: 0.5s;
-}
-.btn {
+.botao {
     cursor: pointer;
-    background: var(--roxo-claro);
     color: var(--roxo-escuro);
-    padding: 10px 30px;
-    border-radius: 10px;
-    transition: 0.3s;
+    background: var(--roxo-claro);
     border: none;
+    
 }
-.btn:hover {
-    color: var(--rosa-claro);
-    background: var(--roxo-escuro);
-}
-.fundocolor {
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 5%;
+    
     background: var(--rosa-claro);
+    
 }
+header nav{
+    
+    /* padding: 0 20px; */
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
 
-/* mains */
-.text-main {
-    width: 50%;
-    color:  var(--roxo-escuro);
 }
-.text-main h1 {
-    font-size: 4em;
+header h1 a {
+    font-size: 30px;
+    color: var(--roxo-escuro);
 }
-.text-main h2 {
-    font-size: 2rem;
-    color: var(--roxo-claro);
+/* Nav bar com efeitos e espaço certos */
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    list-style: none;
+
 }
-.main-img {
-    width: 50%;
-    max-width: 400px; /* limita o tamanho da imagem */
-    text-align: center; /* para o texto alt */
+header nav ul li {
+    padding: 0 20px;
+    
+    cursor: pointer;
+    color: var(--roxo-escuro);
+
 }
-.main-img img {
-    width: 100%; /* ajusta para o conteiner no caso .main-img*/
-    border-radius: 50%;
-    box-shadow: 0 0 15px var(--roxo-escuro); /*sobra*/
-    object-fit: cover; /* Garante que a imagem expanda sem distorçao*/
+header nav ul li:hover {
+    border-radius: 8px;
+    transition: 0.5s;
+    background-color: var(--roxo-escuro);
+    color: var(--rosa-claro);
+}
+header nav a {
+    margin-left: 10px;
+    padding: 10px 30px;
+    border-radius: 16px;
+}
+header nav a:hover {
+    transition: 0.3s;
+    background: var(--roxo-escuro);
+    color: var(--rosa-claro);
+}
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 100%;
+    }
+
+    header nav ul li {
+        width: 100%;
+        text-align: center;
+    }
 }
