@@ -115,9 +115,6 @@ main {
 
     transition: 1s;
     box-shadow: 0 0 50px var(--rosa-claro);
-
-main:hover {
-    box-shadow: 0 0 50px var(--rosa-claro);
 }
 main div {
     flex-direction: column;
