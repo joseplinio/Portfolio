@@ -112,12 +112,6 @@ main {
     border-radius: 16px;
     
     background: var(--rosa-claro);
-    box-shadow: 5px 5px 15px var(--roxo-escuro)
-}
-
-main:hover {
-    transition: 1s;
-
     box-shadow: 0 0 50px var(--rosa-claro);
 }
 main div {
