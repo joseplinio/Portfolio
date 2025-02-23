@@ -15,7 +15,6 @@
 body {
     font-family: "Poppins", sans-serif;
     background:  var(--roxo-medio);
-    min-height: 100vh;
 }
 :root {
     /* familia roxo */
@@ -36,13 +35,6 @@ body {
     --fundo: linear-gradient(45deg, #591ED9, #8C2354)
 }
 /* Classes */
-.botao {
-    cursor: pointer;
-    border: none;
-    
-    color: var(--roxo-escuro);
-    background: var(--roxo-claro);
-}
 header {
     display: flex;
     justify-content: space-between;
@@ -96,23 +88,35 @@ header nav a:hover {
     background: var(--roxo-escuro);
     color: var(--rosa-claro);
 }
-
+.botao {
+    cursor: pointer;
+    border: none;
+    
+    color: var(--roxo-escuro);
+    background: var(--roxo-claro);
+}
 /* Main */
 main {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
+    cursor: pointer;
+
     width: 90%;
     max-width: 1300px;
     height: 450px;
     
     padding: 0 5%;
-    margin:30px auto;
+    margin: 30px auto;
     border-radius: 16px;
     
     background: var(--rosa-claro);
-    box-shadow: 0 0 50px var(--rosa-claro);
+    box-shadow: 0 0 25px var(--rosa-claro);
+}
+main:hover {
+    transition: 0.5s;
+    box-shadow: 0 0 40px var(--rosa-claro);
 }
 main div {
     flex-direction: column;
@@ -137,6 +141,47 @@ main img {
 
     box-shadow: 0 0 15px var(--roxo-escuro);
 }
+.about {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 2.5rem;
+
+    text-align: justify;
+    text-indent: 16px;
+
+    background-color: var(--rosa-claro);
+}
+.about .blocos {
+    display: flex;
+
+    cursor: pointer;
+    overflow: hidden;
+    overflow-y: scroll;
+
+    padding: 20px;
+
+    height: 300px;
+
+    margin: 15px 15px;
+    border-radius: 16px;
+    border: solid var(--roxo-claro);
+    
+    box-shadow: 0 0 16px var(--roxo-medio);
+    background: var(--roxo-escuro);
+}
+.about .blocos:hover {
+    transition: 0.5s;
+    transform: translateY(-10px);
+
+    box-shadow: 0 0 32px var(--roxo-claro);
+}
+.about .blocos p {
+    padding: 5% 5%;
+
+    color: var(--rosa-claro);
+}
 
 @media (width <= 40rem ) { /*Celulares*/
     main {
@@ -145,7 +190,14 @@ main img {
     main img {
         margin-top: 50px;
     }
+    .about .blocos {
+        height: 7rem;
 
+    }
+    .about .blocos p {
+        padding: 0 5px;
+        font-size: 15px;
+    }
 }
 @media (width <= 48rem) { /*Tablets*/
     header nav ul {
@@ -164,6 +216,13 @@ main img {
     header h1 {
         margin-top: 5%;
     }
+    main div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 32px;
+    }
     main h1 {
         text-align: center, justify;
         font-size: 2rem;
@@ -175,6 +234,13 @@ main img {
         font-size: 1rem;
     
         color: var(--roxo-claro);
+    }
+    .about {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    .about .blocos {
+        padding: 0;
+        font-size: 18px;
     }
 
 }
