@@ -1,13 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
-    text-align: justify;
     text-decoration: none;
     font-family: "Poppins", sans-serif;
 
     margin: 0px;
     padding: 0px;
-    margin: 0px;
 
     box-sizing: border-box;
 }
@@ -24,15 +22,6 @@ body {
     --roxo-claro: #591ED9;
     --roxo-muito-escuro: #100626;
     
-    /* complementares */
-    --roxa-vinho: #A62461;
-    --vinho: #8C2354;
-    --azul-claro: #8BBBD9;
-    --azul-morto: #486773;
-    --preto: #0D0D0D;
-
-    /* grandintes */
-    --fundo: linear-gradient(45deg, #591ED9, #8C2354)
 }
 /* Classes */
 header {
@@ -44,7 +33,7 @@ header {
     box-shadow: 0 10px 0 var(--roxo-claro);
     background: var(--rosa-claro);
 }
-header nav{
+header nav {
     display: flex;
     align-items: center;
 
@@ -55,7 +44,6 @@ header h1 a {
 
     color: var(--roxo-escuro);
 }
-/* Nav bar com efeitos e espaço certos */
 header nav ul {
     display: flex;
     justify-content: space-between;
@@ -95,7 +83,7 @@ header nav a:hover {
     color: var(--roxo-escuro);
     background: var(--roxo-claro);
 }
-/* Main */
+/* Seçao principal*/
 main {
     display: flex;
     justify-content: space-between;
@@ -141,6 +129,7 @@ main img {
 
     box-shadow: 0 0 15px var(--roxo-escuro);
 }
+/* Seçao sobre */
 .about {
     display: grid;
     align-items: center;
@@ -150,7 +139,7 @@ main img {
 
     text-align: justify;
     text-indent: 16px;
-
+    
     background-color: var(--rosa-claro);
 }
 .about .blocos {
@@ -182,7 +171,57 @@ main img {
 
     color: var(--rosa-claro);
 }
+.projeto {
+    display: flex;
+    justify-content: center;
 
+    padding: 40px 0;
+
+    .blocos {
+        height: 500px;
+        width: 50%;
+        
+        overflow: hidden;
+        overflow-y: scroll;
+        
+        border-radius: 16px;
+        padding: 1.5% 2.5% 2.5% 2.5%;
+        border:  solid var(--roxo-claro);
+        
+        
+        color: var(--roxo-escuro);
+        background: var(--rosa-claro);
+        box-shadow: 0 0 20px var(--rosa-claro);
+        
+        img {
+            height: 100px;
+        }
+        p {
+            padding-bottom: 8%;
+        }
+        a {
+            border-radius: 16px;
+            border: solid var(--rosa-claro);
+            padding: 10px 30px;
+            
+            background: var(--roxo-claro);
+            color: var(--roxo-escuro);
+        }
+        a:hover {
+            transition: 0.5s;
+
+            color: var(--rosa-claro);
+            background: var(--roxo-escuro);
+            border: solid var(--roxo-escuro);
+            
+            box-shadow: 0 0 5px var(--roxo-claro);
+        }
+    }
+    .blocos:hover {
+        transition: 0.5s;
+        box-shadow: 0 0 40px var(--rosa-claro);
+    }
+}
 @media (width <= 40rem ) { /*Celulares*/
     main {
         flex-direction: column-reverse;
@@ -191,12 +230,13 @@ main img {
         margin-top: 50px;
     }
     .about .blocos {
-        height: 7rem;
-
+        height: 8rem;
     }
-    .about .blocos p {
-        padding: 0 5px;
-        font-size: 15px;
+    .projeto .blocos {
+        text-align: center;
+    }
+    .projeto .blocos a:hover, a {
+        border: none;
     }
 }
 @media (width <= 48rem) { /*Tablets*/
@@ -241,6 +281,9 @@ main img {
     .about .blocos {
         padding: 0;
         font-size: 18px;
+    }
+    .projeto .blocos {
+        text-align: center;
     }
 
 }
