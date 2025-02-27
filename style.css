@@ -34,6 +34,8 @@ header {
     background: var(--rosa-claro);
 }
 header nav {
+    cursor: pointer;
+
     display: flex;
     align-items: center;
 
@@ -52,7 +54,6 @@ header nav ul {
     list-style: none;
 }
 header nav ul li {
-    cursor: pointer;
 
     padding: 0 20px;
     
@@ -63,6 +64,17 @@ header nav ul li:hover {
     transition: 0.5s;
 
     background-color: var(--roxo-escuro);
+    color: var(--rosa-claro);
+}
+header nav #contato {
+    border-radius: 8px;
+    margin: 0;
+    padding: 0 20px;
+    
+    color: var(--roxo-escuro);
+}
+header nav #contato:hover {
+    transition: 0.5s;
     color: var(--rosa-claro);
 }
 header nav a {
@@ -222,6 +234,47 @@ main img {
         box-shadow: 0 0 40px var(--rosa-claro);
     }
 }
+/* Finalisação */
+#end {
+    background: var(--rosa-claro);
+    color: var(--roxo-escuro);
+}
+#end .main-text {
+    text-align: center;
+    padding: 10px;
+
+}
+#end .main-text a {
+    color: var(--roxo-claro);
+}
+#end nav {
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.1rem;
+}
+#end nav ul {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 10px;
+    list-style: none;
+}
+#end nav ul li a {
+    padding: 0 20px;
+    
+    color: var(--roxo-escuro);
+}
+#end nav ul li a:hover {
+    border-radius: 8px;
+    transition: 0.5s;
+
+    background-color: var(--roxo-escuro);
+    color: var(--rosa-claro);
+}
 @media (width <= 40rem ) { /*Celulares*/
     main {
         flex-direction: column-reverse;
@@ -235,9 +288,46 @@ main img {
     .projeto .blocos {
         text-align: center;
     }
-    .projeto .blocos a:hover, a {
+    .projeto .blocos a:hover, .projeto .blocos a {
         border: none;
     }
+    #end {
+        background: var(--rosa-claro);
+        color: var(--roxo-escuro);
+    }
+    #end .main-text {
+        text-align: center;
+        padding: 2.5%;
+    }
+    #end nav {
+        cursor: pointer;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        font-size: 1.1rem;
+    }
+    #end nav ul {
+        display: flex;
+        justify-content: space-between;
+    
+        padding: 10px;
+        list-style: none;
+    }
+    #end nav ul li a {
+        padding: 0 20px;
+        
+        color: var(--roxo-escuro);
+    }
+    #end nav ul li a:hover {
+        border-radius: 8px;
+        transition: 0.5s;
+    
+        background-color: var(--roxo-escuro);
+        color: var(--rosa-claro);
+    }
+
 }
 @media (width <= 48rem) { /*Tablets*/
     header nav ul {
